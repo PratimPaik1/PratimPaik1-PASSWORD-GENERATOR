@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+html,body{
+    height: 100%;
+    width:100%;
+}
+body{
+    background-color: rgb(30, 29, 29);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 280deg;
+    inherits: false;
+}
+
+
+
+.container{
+    max-height: 80vh;
+    max-width: 50vw;
+    
+    padding: 1vw;
+    border: 0px solid transparent;
+
+    display: flex;
+    flex-direction: column;
+    gap:25px;
+    border-radius: 25px;
+    background: 
+    linear-gradient(black) padding-box,
+    conic-gradient(from var(--angle),black, gray,black) border-box;
+   animation: rotate 5s linear infinite;
+}
+
+.container:hover{
+    border: 5px solid transparent;
+}
+
+@keyframes rotate {
+    from{
+        --angle:0deg;
+    }
+    to{
+        --angle:360deg;
+    }
+    
+}
+
+
+
+.display-container{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.display{
+    width: 80%;
+    padding: 3px;
+    border-radius: 25px;
+    border: none;
+    
+}
+#copyButton{
+    background-color:transparent;
+    color: white;
+    border: none;
+    font-size: 20px;
+    position: relative;
+}
+#icon{
+    position: absolute;
+    left: -50px;
+    top:-10px;
+    pointer-events: none;
+    opacity: 0.5;
+}
+#copyButton span{
+    background-color: yellowgreen;
+    border-radius: 2px;
+    padding: 5px;
+    font-size: 9px;
+    position: absolute;
+    top:-30px;
+    left:-50px;
+    opacity: 0;
+}
+.input-container{
+   display: flex;
+   flex-direction: column;
+   gap:10px;
+   justify-content: center;
+}
+.length-container{
+
+    width: 90%;
+    display: flex;
+    gap:15px;
+}
+.slider{
+    width: 100%;
+    height:12px;
+   
+}
+
+
+
+
+
+
+.strength-container{
+    display: flex;
+    align-items: center;
+    gap:15px
+}
+
+#data-indicator{
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+}
+
+.generateButton{
+    width: 100px;
+}
+
+
